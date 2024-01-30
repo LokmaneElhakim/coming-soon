@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: "Syne";
+  src: url("/fonts/Syne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("/fonts/Syne-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
