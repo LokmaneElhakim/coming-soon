@@ -12,8 +12,9 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Coming Soon",
-  description: "Join the waitlist for our upcoming launch!",
+  title: "Coming Soon Page",
+  description:
+    "We can't wait to share the exciting launch of our website with you! 🚀 Stay tuned for the event. Subscribe now to be the first to know when we go live! 🌐✨",
 };
 
 export default function RootLayout({
