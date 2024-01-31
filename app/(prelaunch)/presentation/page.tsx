@@ -13,18 +13,12 @@ const Presentation = () => {
         className="presentation_container overflow-hidden z-0"
         style={{ height: "100vh", width: "100%" }}
       >
-        {(
-          <iframe
-            src="https://pitch.com/embed-link/y2hbxt"
-            allow="fullscreen"
-            allowFullScreen
-            style={{ border: 0, width: "100%", height: "100%" }}
-          ></iframe>
-        ) || (
-          <p className="-z-10 mt-10">
-            Please await the presentation to load , Thank you for touy time
-          </p>
-        )}
+        <iframe
+          src="https://pitch.com/embed-link/y2hbxt"
+          allow="fullscreen"
+          allowFullScreen
+          style={{ border: 0, width: "100%", height: "100%" }}
+        ></iframe>
       </div>
       <button
         className="right-3 bottom-3 fixed cursor-pointer m-5/2 p-3 border-none rounded-full z-30 bg-black"

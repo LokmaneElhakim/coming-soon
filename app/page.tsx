@@ -46,6 +46,33 @@ export default async function Index() {
               Join the anticipation
             </button>
           </div>
+          <button className="right-3 bottom-3 fixed cursor-pointer m-5/2 p-3 border-none rounded-full z-30 bg-black">
+            <svg
+              fill="#ffffff"
+              height="20px"
+              width="20px"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 202.423 202.423"
+              xmlSpace="preserve"
+              stroke="#ffffff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path d="M87.416,186.643c-4.359,0-7.885,3.541-7.885,7.874c0,4.362,3.525,7.906,7.885,7.906c4.357,0,7.885-3.544,7.885-7.906 C95.301,190.184,91.774,186.643,87.416,186.643z"></path>
+                  <path d="M101.212,0c-34.694,0-62.92,28.226-62.92,62.92c0,4.142,3.358,7.5,7.5,7.5c4.142,0,7.5-3.358,7.5-7.5 c0-26.423,21.497-47.92,47.92-47.92c26.422,0,47.918,21.497,47.918,47.92c0,26.425-21.496,47.923-47.918,47.923 c-0.259,0-0.516,0.013-0.769,0.039c-11.128,0.4-20.088,9.36-20.488,20.487c-0.026,0.253-0.039,0.509-0.039,0.769v30.922 c0,4.142,3.358,7.5,7.5,7.5c4.142,0,7.5-3.358,7.5-7.5v-30.922c0-3.471,2.824-6.295,6.296-6.295 c34.693,0,62.918-28.227,62.918-62.923C164.13,28.226,135.906,0,101.212,0z"></path>{" "}
+                </g>
+              </g>
+            </svg>
+          </button>
         </footer>
       </div>
     </>
