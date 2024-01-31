@@ -24,9 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={syne.className}>
       <body className="bg-background text-foreground coming-soon-page-background">
-        <main className="min-h-screen flex flex-col items-center">
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
