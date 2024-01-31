@@ -23,6 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={syne.className}>
+      <link
+        rel="icon"
+        href="/svg/logo-grey.svg"
+        type="image/<generated>"
+        sizes="<generated>"
+      />
       <body className="bg-background text-foreground coming-soon-page-background">
         <main>{children}</main>
       </body>
