@@ -75,8 +75,6 @@ body {
 .link_wrapper {
   margin: 0;
   padding: 0;
-  /* the higher it can be because of the transition animation*/
-  z-index: 1000;
 }
 /*
 footer
@@ -96,14 +94,14 @@ footer
   padding: 12px, 18px, 12px, 18px;
   border-radius: 4px;
   gap: 10px;
-  background-color: #1218ae;
+  background-color: #064e3b;
 }
 .email_input {
   font-size: 20px;
   width: 60%;
   border-radius: 4px;
   background-color: transparent;
-  border: 0.1px solid #1218ae;
+  border: 0.1px solid #064e3b;
 }
 .email_input::placeholder {
   padding: 10px;

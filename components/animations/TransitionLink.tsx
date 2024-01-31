@@ -19,7 +19,7 @@ export default function TransitionLink({
   return (
     <button
       className={
-        "border-[1px] border-none p-4 rounded-xl bg-inherit cursor-pointer z-10"
+        "border-[1px] p-4 rounded-xl border-none bg-blend-darken cursor-pointer z-10"
       }
       onClick={handleClick}
     >
