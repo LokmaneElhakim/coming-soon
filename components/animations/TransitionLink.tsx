@@ -14,7 +14,7 @@ export default function TransitionLink({
 }: {
   cn?: string;
   href: string;
-  label: string;
+  label?: string;
   color?: "inverted" | undefined;
   svg?: {
     icon?: "start" | undefined;
@@ -32,7 +32,7 @@ export default function TransitionLink({
       cn={`rounded-xl border border-solid cursor-pointer  ${cn}`}
       color={color}
       handleClick={handleClick}
-      label={label}
+      label={label || ""}
       svg={svg}
     />
   );

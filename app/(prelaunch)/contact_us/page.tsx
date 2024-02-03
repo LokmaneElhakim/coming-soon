@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Button from "@/components/Button";
 import { Toaster, toast } from "sonner";
+import { GoArrowLeft } from "react-icons/go";
+import Link from "next/link";
 
 type Inputs = {
   firstName: string;
@@ -11,7 +13,6 @@ type Inputs = {
   message?: string;
 };
 const ContactUs = () => {
-  const [success, setSuccess] = useState<boolean | undefined>();
   const { register, handleSubmit, reset } = useForm<Inputs>({
     defaultValues: {
       firstName: "",
@@ -30,7 +31,6 @@ const ContactUs = () => {
       .send("service_l7fduua", "template_wdfz5vk", data)
       .then(function (response) {
         if (response.status == 200) {
-          setSuccess(true);
           toast.success("Thanks for joining our waitlist!", {
             description:
               "We'll keep you informed and notify you once we launch.",
@@ -40,9 +40,17 @@ const ContactUs = () => {
   };
   return (
     <>
+      <div className="left-1.5 top-3.5 fixed cursor-pointer m-5/2 p-0 border-none rounded-full z-30">
+        <Link
+          href="/"
+          className="left-3 top-3 fixed cursor-pointer m-5/2 p-3 border-none rounded-full z-30 bg-black"
+        >
+          <GoArrowLeft />
+        </Link>
+      </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="my-10 mx-auto max-w-lg "
+        className="sm:my-16 my-10 mx-auto max-w-lg "
       >
         <div className="flex flex-wrap mx-2 md:-mx-3 mb-6 items-start">
           <div className="w-full px-3">
@@ -105,7 +113,7 @@ const ContactUs = () => {
           handleClick={() =>
             setTimeout(() => {
               reset();
-            }, 2000)
+            }, 1500)
           }
         />
       </form>
