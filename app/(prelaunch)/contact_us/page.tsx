@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-// import sendEmail from "@/app/hooks/useSendEmail";
 import emailjs from "@emailjs/browser";
 import Button from "@/components/Button";
+import { Toaster, toast } from "sonner";
 
 type Inputs = {
   firstName: string;
@@ -11,6 +11,7 @@ type Inputs = {
   message?: string;
 };
 const ContactUs = () => {
+  const [success, setSuccess] = useState<boolean | undefined>();
   const { register, handleSubmit, reset } = useForm<Inputs>({
     defaultValues: {
       firstName: "",
@@ -21,10 +22,21 @@ const ContactUs = () => {
   });
   const onSubmit: any = (data: Inputs, e: React.FormEvent) => {
     e.preventDefault();
-    // you'll need the secret key to send emails (contact me for access)
-    // you can get your own version of it  by signing up at https://www.emailjs.com/
+    /* you'll need the secret key to send emails (contact me for access)
+     you can get your own version of it  by signing up at https://www.emailjs.com/
+    */
     emailjs.init("BC8sGNr9RmNvoZTJW");
-    emailjs.send("service_l7fduua", "template_wdfz5vk", data);
+    emailjs
+      .send("service_l7fduua", "template_wdfz5vk", data)
+      .then(function (response) {
+        if (response.status == 200) {
+          setSuccess(true);
+          toast.success("Thanks for joining our waitlist!", {
+            description:
+              "We'll keep you informed and notify you once we launch.",
+          });
+        }
+      });
   };
   return (
     <>
@@ -90,8 +102,14 @@ const ContactUs = () => {
           type="submit"
           color="inverted"
           label="Join the wailist"
+          handleClick={() =>
+            setTimeout(() => {
+              reset();
+            }, 2000)
+          }
         />
       </form>
+      <Toaster richColors />
     </>
   );
 };

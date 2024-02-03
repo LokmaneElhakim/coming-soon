@@ -97,7 +97,7 @@ export default function useGetfaq() {
       id: 14,
       question: "How can I get in touch with the technical support team?",
       answer:
-        "For technical support, you can reach out to our dedicated team through multiple channels. Feel free to contact us via email at support@example.com, through our live chat feature on the website, or by calling our technical support hotline at +1-123-456-7890.",
+        "For technical support, you can reach out to our dedicated team through multiple channels. Feel free to contact us via email at lokmaneelhakimbaslimane@gmail.com, or by filling the contact form ",
     },
   ];
   return faq;
