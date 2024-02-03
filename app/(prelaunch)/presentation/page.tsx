@@ -1,14 +1,20 @@
 "use client";
 import TransitionLink from "@/components/animations/TransitionLink";
 import React, { useState } from "react";
+import { GoArrowLeft, GoChevronUp, GoChevronDown } from "react-icons/go";
 const Presentation = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="m-0 p-0 h-full w-full">
-      <button className="left-3 top-2 fixed cursor-pointer m-5/2 p-0 border-none rounded-full z-30 ">
-        <img src="/svg/arrow-left.svg" alt="" className="p-0 m-0" />
-        <TransitionLink href="/" label="Home" />
-      </button>
+      <div className="left-1.5 top-3.5 fixed cursor-pointer m-5/2 p-0 border-none rounded-full z-30">
+        <TransitionLink
+          href="/"
+          color="inverted"
+          label="Home"
+          svg={{ icon: "start", component: <GoArrowLeft className="mr-2" /> }}
+          cn="m-0"
+        />
+      </div>
       <div
         className="presentation_container overflow-hidden z-0"
         style={{ height: "100vh", width: "100%" }}
@@ -24,10 +30,7 @@ const Presentation = () => {
         className="right-3 bottom-3 fixed cursor-pointer m-5/2 p-3 border-none rounded-full z-30 bg-black"
         onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
       >
-        <img
-          src={isOpen ? "/svg/arrow-down.svg" : "/svg/arrow-up.svg"}
-          alt="toggle pannel button"
-        />
+        {isOpen ? <GoChevronDown /> : <GoChevronUp />}
       </button>
       {isOpen && (
         <div
