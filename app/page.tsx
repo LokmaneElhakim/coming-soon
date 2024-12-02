@@ -9,7 +9,7 @@ export default async function Index() {
   return (
     <>
       <button className="right-3 top-3 fixed cursor-pointer m-5/2 p-3 border-none rounded-full z-30 bg-black mb-5">
-        <a href="https://github.com/Lokmane04" target="_blank">
+        <a href="https://github.com/Lokmaneelhakim" target="_blank">
           <svg
             viewBox="0 0 16 16"
             className="w-5 h-5"
